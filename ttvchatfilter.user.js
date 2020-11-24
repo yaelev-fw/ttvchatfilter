@@ -18,6 +18,7 @@
 
 var previousChannel;
 var searchField;
+var searchFieldParent;
 var messageList;
 var startLoop;
 var messageObserver;
@@ -40,6 +41,11 @@ if (head.length > 0)
             {
                 searchField.remove();
                 searchField = undefined;
+            }
+            if (searchFieldParent != undefined)
+            {
+                searchFieldParent.remove();
+                searchFieldParent = undefined;
             }
             if (messageList != undefined)
             {
@@ -78,22 +84,23 @@ function run()
     }
 
     // Create the search field
-    if (searchField == undefined)
+    if (searchField == undefined && searchFieldParent == undefined)
     {
         var rightButtonsRow = document.getElementsByClassName("chat-input__buttons-container tw-flex tw-justify-content-between tw-mg-t-1");
         if (rightButtonsRow.length > 0)
         {
-            var div             = document.createElement('div');
-            div.innerHTML       = `<input class="searchInput" type="text" placeholder="Search..">`;
-            div.style.width     = "100%";
-            div.style.arginLeft = "10px";
-
             rightButtonsRow = rightButtonsRow[0].getElementsByClassName("tw-align-content-center tw-align-items-center tw-flex tw-flex-row");
             if (rightButtonsRow.length > 0)
             {
-                rightButtonsRow[0].before(div);
+                searchFieldParent           = document.createElement('div');
+                searchFieldParent.innerHTML = `<input class="searchInput" type="text" placeholder="Search..">`;
 
-                searchField                       = div.getElementsByTagName("input")[0];
+                searchFieldParent.style.width      = "100%";
+                searchFieldParent.style.marginLeft = "10px";
+
+                rightButtonsRow[0].before(searchFieldParent);
+
+                searchField                       = searchFieldParent.getElementsByTagName("input")[0];
                 searchField.style.backgroundColor = "var(--color-background-input)";
                 searchField.style.paddingTop      = "0.5rem";
                 searchField.style.paddingBottom   = "0.5rem";
