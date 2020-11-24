@@ -1,13 +1,13 @@
 // ==UserScript==
-// @name         TTVChatFilter
-// @namespace    localhost
-// @version      0.5
-// @description  Filter/search TTV chat messages, supports text and usernames.
-// @author       me
-// @match        https://www.twitch.tv/*
-// @grant        none
-// @updateURL    https://github.com/yaelev-fw/ttvchatfilter/raw/main/ttvchatfilter.user.js
-// @downloadURL  https://github.com/yaelev-fw/ttvchatfilter/raw/main/ttvchatfilter.user.js
+// @name TTVChatFilter
+// @namespace localhost
+// @version 0.5
+// @description Filter/search TTV chat messages, supports text and usernames.
+// @author me
+// @match https://www.twitch.tv/*
+// @grant none
+// @updateURL https://github.com/yaelev-fw/ttvchatfilter/raw/main/ttvchatfilter.user.js
+// @downloadURL https://github.com/yaelev-fw/ttvchatfilter/raw/main/ttvchatfilter.user.js
 // ==/UserScript==
 
 
