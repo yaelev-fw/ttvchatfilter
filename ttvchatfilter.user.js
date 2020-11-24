@@ -3,7 +3,7 @@
 // @namespace    localhost
 // @version      0.3
 // @description  Filter/search TTV chat messages, supports text and usernames.
-// @author       wellef
+// @author       me
 // @match        https://www.twitch.tv/*
 // @grant        none
 // @updateURL    https://github.com/yaelev-fw/ttvchatfilter/raw/main/ttvchatfilter.user.js
