@@ -2,15 +2,17 @@
 // @name         TTVChatFilter
 // @namespace    localhost
 // @version      0.3
-// @description  Filter/search TTV chat messages, supports text and usernames. Currently based on FFZ.
+// @description  Filter/search TTV chat messages, supports text and usernames.
 // @author       wellef
 // @match        https://www.twitch.tv/*
 // @grant        none
+// @updateURL    https://github.com/yaelev-fw/ttvchatfilter/raw/main/ttvchatfilter.user.js
+// @downloadURL  https://github.com/yaelev-fw/ttvchatfilter/raw/main/ttvchatfilter.user.js
 // ==/UserScript==
 
 
 // TODO:
-// • This is only working for ffz chats (i guess?), add support for native by turing the addon off and debug.
+// • This is working for ffz chats, other variants untested.
 // • BTTV emotes, do they follow the FFZ standard?
 
 
