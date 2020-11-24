@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name TTVChatFilter
 // @namespace localhost
-// @version 0.5
+// @version 0.6
 // @description Filter/search TTV chat messages, supports text and usernames.
 // @author me
 // @match https://www.twitch.tv/*
