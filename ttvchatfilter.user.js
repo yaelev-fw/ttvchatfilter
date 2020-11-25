@@ -1,13 +1,14 @@
 // ==UserScript==
 // @name TTVChatFilter
 // @namespace localhost
-// @version 0.6
+// @version 0.7
 // @description Filter/search TTV chat messages, supports text and usernames.
 // @author me
 // @match https://www.twitch.tv/*
 // @grant none
 // @updateURL https://github.com/yaelev-fw/ttvchatfilter/raw/main/ttvchatfilter.user.js
 // @downloadURL https://github.com/yaelev-fw/ttvchatfilter/raw/main/ttvchatfilter.user.js
+// @history 0.7 Added support for squad streams.
 // ==/UserScript==
 
 
@@ -34,9 +35,13 @@ if (head.length > 0)
         var title = document.getElementsByTagName("head")[0].getElementsByTagName("title")[0].innerText;
 
         // Reset at new page
-        if (title.indexOf(" - Twitch") > 0 && previousChannel != title)
+        if ((title.indexOf(" - Twitch") > 0 && previousChannel != title) || location.pathname.indexOf("/squad") == location.pathname.length -"/squad".length)
         {
-            previousChannel = title;
+            if (location.pathname.indexOf("/squad") == location.pathname.length -"/squad".length)
+                previousChannel = location.pathname.replace("/squad", "");
+            else
+                previousChannel = title;
+
             if (searchField != undefined)
             {
                 searchField.remove();
